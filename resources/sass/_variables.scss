@@ -1,8 +1,14 @@
 // Body
-$body-bg: #f8fafc;
+$body-bg: white;
+$bg-over: rgba(white, .65);
+body {
+    background-image: linear-gradient($bg-over, $bg-over), url('img/decor/pattern.svg');
+    background-size: 5rem;
+}
 
 // Typography
-$font-family-sans-serif: 'Nunito', sans-serif;
+$font-family-heading: 'Lobster', cursive;
+$font-family-sans-serif: 'Noto Serif', serif;
 $font-size-base: 0.9rem;
 $line-height-base: 1.6;
 
@@ -17,3 +23,6 @@ $yellow: #ffed4a;
 $green: #38c172;
 $teal: #4dc0b5;
 $cyan: #6cb2eb;
+
+$gold : #E5C282;
+$barna : #634115;
