@@ -4,6 +4,7 @@ $bg-over: rgba(white, .65);
 body {
     background-image: linear-gradient($bg-over, $bg-over), url('img/decor/pattern.svg');
     background-size: 5rem;
+    padding-top: 55px;
 }
 
 // Typography
@@ -12,17 +13,28 @@ $font-family-sans-serif: 'Noto Serif', serif;
 $font-size-base: 0.9rem;
 $line-height-base: 1.6;
 
+@font-face {
+    font-family: arecibo;
+    src: url('/fonts/arecibo.ttf');
+}
+
+.heading{
+    font-family: $font-family-heading;
+}
+
 // Colors
-$blue: #3490dc;
+//$blue: #3490dc;
+$blue: #634115;
 $indigo: #6574cd;
 $purple: #9561e2;
 $pink: #f66d9b;
-$red: #e3342f;
+$red: #6E0D0D;
 $orange: #f6993f;
 $yellow: #ffed4a;
 $green: #38c172;
 $teal: #4dc0b5;
 $cyan: #6cb2eb;
 
+$off-white: #E8DDCC;
 $gold : #E5C282;
 $barna : #634115;

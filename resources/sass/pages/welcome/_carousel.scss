@@ -1,0 +1,30 @@
+.carousel-img {
+    height: 18rem;
+    background-size: cover;
+    background-position: center;
+}
+
+#carousel01 {
+    background-image: linear-gradient(127.06deg, rgba($red, 0.6) 0.24%, rgba($red, 0.75) 35.57%, rgba($red, 0.75) 64.67%, rgba($red, 0.6) 100%), url('img/welcome/carousel_1.jpg');
+}
+
+#carousel02 {
+    background-image: linear-gradient(127.06deg, rgba($red, 0.6) 0.24%, rgba($red, 0.75) 35.57%, rgba($red, 0.75) 64.67%, rgba($red, 0.6) 100%), url('img/welcome/carousel_2.jpg');
+}
+
+#carousel03 {
+    background-image: linear-gradient(127.06deg, rgba($red, 0.6) 0.24%, rgba($red, 0.75) 35.57%, rgba($red, 0.75) 64.67%, rgba($red, 0.6) 100%), url('img/welcome/carousel_3.jpg');
+}
+
+.welcome-main {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: $off-white;
+    text-shadow: 0px 0px 10px $red, 0px 0px 20px $red, 0px 0px 30px $red, 0px 0px 45px $red, 0px 0px 60px $red, 0px 0px 80px $red;
+    font-family: arecibo;
+    font-size: 5rem;
+    text-align: center;
+    color: #E8DDCC;
+}

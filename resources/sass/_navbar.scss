@@ -1,3 +1,38 @@
 .bg-dark {
     background-color: black !important;
 }
+
+.navbar-brand {
+    width: 46px;
+    height: 40px;
+    margin-top: -10px;
+    margin-right: 20px;
+    background-image: url('img/logo/ue-logo-off.svg');
+    background-size: cover;
+
+    &:hover {
+        background-image: url('img/logo/ue-logo-bw.svg');
+    }
+
+    &__active {
+        background-image: url('img/logo/ue-logo-clr.svg');
+        opacity: 1;
+    }
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: $off-white;
+
+    &:hover {
+        color: white;
+    }
+
+    @media (min-width: 768px) {
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+}
+
+.navbar-dark .navbar-nav .show > .nav-link, .navbar-dark .navbar-nav .active > .nav-link, .navbar-dark .navbar-nav .nav-link.show, .navbar-dark .navbar-nav .nav-link.active {
+    color: $gold;
+}
