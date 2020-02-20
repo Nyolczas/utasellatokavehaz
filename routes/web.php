@@ -11,25 +11,9 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-Route::get('/about', function () {
-    return view('about');
-})->name('about');
-Route::get('/menu', function () {
-    return view('menu');
-})->name('menu');
-Route::get('/gallery', function () {
-    return view('gallery');
-})->name('gallery');
-Route::get('/event', function () {
-    return view('event');
-})->name('event');
-Route::get('/contact', function () {
-    return view('contact');
-})->name('contact');
 
 Auth::routes();
 
+Route::get('/', 'WelcomeController@index')->name('welcome');
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/admenu', 'MenuController@index')->name('admenu');

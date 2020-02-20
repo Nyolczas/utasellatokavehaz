@@ -2,6 +2,6 @@
 
 @section('content')
 <div class="container">
-    <h1>Rólunk</h1>
+    <h1>Menü szerkesztése</h1>
 </div>
 @endsection
