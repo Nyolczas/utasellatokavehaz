@@ -10943,6 +10943,17 @@ a.text-dark:focus {
   color: #E5C282;
 }
 
+.keret {
+  background-color: white;
+  border: 2px solid #E5C282;
+  padding: 0.5rem;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.keret-bel {
+  border: 1px solid #E5C282;
+}
+
 .carousel-img {
   height: 18rem;
   background-size: cover;

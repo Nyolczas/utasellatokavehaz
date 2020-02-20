@@ -17,3 +17,4 @@ Auth::routes();
 Route::get('/', 'WelcomeController@index')->name('welcome');
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/admenu', 'MenuController@index')->name('admenu');
+Route::resource('/kave', 'KaveController')->except(['show,destroy'])->middleware('auth');

@@ -4,11 +4,12 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use App\Menu;
+//use App\Menu;
+use App\Kave;
 
 class MenuController extends Controller
 {
-    public function __construct()
+    public function __construct(Kave $kave)
     {
         $this->middleware('auth');
     }
@@ -19,7 +20,7 @@ class MenuController extends Controller
      */
     public function index()
     {
-        return view('admenu');
+        return view('admenu', ['kave' => Kave::all()]);
     }
 
     /**
@@ -32,16 +33,7 @@ class MenuController extends Controller
         //
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
-    }
+
 
     /**
      * Display the specified resource.
