@@ -23,6 +23,14 @@ class KaveController extends Controller
         return redirect('/admenu');
     }
 
+    public function update(Request $request, $id)
+    {
+        $kave = Kave::findOrFail($id);
+
+        $this->kave->saveKave($request, $kave);
+        return redirect('/admenu');
+
+    }
     public function destroy($id)
     {
         //

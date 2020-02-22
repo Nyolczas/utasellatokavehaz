@@ -1,5 +1,5 @@
 .tetel{
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
 }
 
 .name{
@@ -12,8 +12,12 @@
 
 .name, .desc {
     line-height: 1.2rem;
+    margin-bottom: 0;
+    color: $barna !important;
+    width: 100%;
 }
 
 .price {
     font-weight: bolder;
+    text-align: right;
 }

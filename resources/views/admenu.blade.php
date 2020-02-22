@@ -15,22 +15,25 @@
 <div class="container mt-4">
     <div class="d-flex flex-wrap">
         <div class="col-12 col-md-6 col-xl-4 keret">
-            <div class="keret-bel p-3">
+            <div class="keret-bel p-4">
                 <h2 class="text-center heading">Kávé különlegességek</h2>
                 <hr>
                 @forelse ($kave as $kv)
-                <div class="tetel">
-                    <div class="d-flex">
-                        <div class="col-9">
-                            <p class="mb-0 name">{{ $kv->name }}</p>
-                            <p class="desc">{{ $kv->description }}</p>
+                <form method="POST" action="{{ route('kave.update', ['kave' => $kv->id])}}" class="tetel">
+                    @csrf
+                    @method('PUT')
+                    <div class="d-flex align-items-end">
+                        <div class="col-9 px-0">
+                            <input type="text" name="name" class="input-hide name" value="{{ $kv->name  }}">
+                            <textarea rows="3" name="description" class="input-hide desc" value="{{ $kv->description }}"></textarea>
                         </div>
-                        <div class="col-3 price">{{ $kv->price }}</div>
+                        <input type="text" name="price" class="col-3 px-0 input-hide price" value="{{ $kv->price }}">
                     </div>
-                    <div class="d-flex">
-
+                    <div class="d-flex mt-1">
+                        <button class="btn btn-success btn-block mr-3" type="submit">Mentés</button>
+                    <a class="btn btn-danger btn-block mt-0 ml-3" href="{{ route('kave.destroy', ['kave' => $kv->id]) }}">Törlés</a>
                     </div>
-                </div>
+                </form>
                 @empty
                 <p>Nincs még kávé különlegesség hozzáadva!</p>
                 @endforelse
