@@ -34,7 +34,7 @@ $pages=[
 
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark">
             <div class="container">
                 <a id="navbarBrand" class="navbar-brand navbar-brand__active" href="{{ url('/') }}#"></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse"

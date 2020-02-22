@@ -13,19 +13,18 @@ class KaveController extends Controller
         $this->kave = $kave;
     }
 
-    public function index()
-    {
-        return view('admenu', ['kave' => Kave::all()]);
-    }
-
     public function store(Request $request)
     {
         $kave = new Kave();
 
         //dd($request);
+        $this->kave->saveKave($request, $kave);
+        $request->session()->flash('status', 'Az új kávé különlegességet sikeresen hozzáadtad!');
+        return redirect('/admenu');
+    }
 
-       if($this->kave->saveKave($request, $kave)){
-        return redirect('kave.index');
-      }
+    public function destroy($id)
+    {
+        //
     }
 }

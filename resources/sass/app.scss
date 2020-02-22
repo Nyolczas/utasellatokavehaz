@@ -1,13 +1,12 @@
-// Fonts
-@import url('https://fonts.googleapis.com/css?family=Lobster|Noto+Serif:400,700&display=swap&subset=latin-ext');
-
 // Variables
 @import 'variables';
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
 
-@import 'navbar';
-@import 'keret';
+@import 'page-elements/navbar';
+@import 'page-elements/keret';
+@import 'page-elements/white-header';
 
-@import 'pages/welcome/carousel';
+@import 'pages/carousel';
+@import 'pages/menu';

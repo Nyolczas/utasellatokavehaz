@@ -10948,10 +10948,20 @@ a.text-dark:focus {
   border: 2px solid #E5C282;
   padding: 0.5rem;
   box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+  color: #634115;
 }
 
 .keret-bel {
   border: 1px solid #E5C282;
+}
+
+.white-header {
+  background-color: white;
+  color: #E5C282;
+  text-align: center;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
 }
 
 .carousel-img {
@@ -10984,5 +10994,26 @@ a.text-dark:focus {
   text-align: center;
   color: #E8DDCC;
   padding-bottom: 0.5rem;
+}
+
+.tetel {
+  margin-bottom: 1rem;
+}
+
+.name {
+  font-weight: bolder;
+}
+
+.desc {
+  padding-left: 0.8rem;
+}
+
+.name,
+.desc {
+  line-height: 1.2rem;
+}
+
+.price {
+  font-weight: bolder;
 }
 
