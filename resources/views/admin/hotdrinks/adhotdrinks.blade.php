@@ -9,27 +9,27 @@
 </div>
 @endif
 
-@include('includes.whiteheader', ['title' => 'Kávé különlegességek szerkesztése'])
+@include('includes.whiteheader', ['title' => 'Meleg italok szerkesztése'])
 
 <div class="container mt-4">
     <div class="d-flex flex-wrap">
         <div class="col-12 col-md-6 col-xl-4 keret mx-auto">
             <div class="keret-bel p-2">
-                <h2 class="text-center heading">Kávé különlegességek</h2>
+                <h2 class="text-center heading">Meleg italok</h2>
                 <hr>
-                @forelse ($kave as $kv)
+                @forelse ($hotdrinks as $hotdrink)
                 @include('includes.tetelAdminCard', [
-                    'tetel' => $kv,
-                    'update' => route('kave.update', ['kave' => $kv->id]),
-                    'destroy' => route('kave.destroy', ['kave' => $kv->id])
+                    'tetel' => $hotdrink,
+                    'update' => route('hotdrinks.update', ['hotdrink' => $hotdrink->id]),
+                    'destroy' => route('hotdrinks.destroy', ['hotdrink' => $hotdrink->id])
                 ])
                 @empty
-                <p>Nincs még kávé különlegesség hozzáadva!</p>
+                <p>Nincs még meleg ital hozzáadva!</p>
                 @endforelse
                 <hr>
                 <div class="card">
-                    <h4 class="card-header heading">Új kávé különlegesség hozzáadása</h4>
-                    <form method="POST" action="{{ route('kave.store')}}" class="card-body">
+                    <h4 class="card-header heading">Új meleg ital hozzáadása</h4>
+                    <form method="POST" action="{{ route('hotdrinks.store')}}" class="card-body">
                         @csrf
                         <div class="form-group">
                             <input type="text" name="name" class="form-control" placeholder="Név" required>
@@ -39,7 +39,7 @@
                         </div>
                         <div class="d-flex flex-wrap">
                             <div class="form-group col-6 pl-0">
-                                <input type="number" name="rank" class="form-control  input-rank" value={{ $kave[count($kave)-1]->rank + 10 }} required>
+                                <input type="number" name="rank" class="form-control  input-rank" value={{ (count($hotdrinks) >= 1) ? $hotdrinks[count($hotdrinks)-1]->rank + 10 : 10 }} required>
                             </div>
                             <div class="form-group col-6 pr-0">
                                 <input type="text" name="price" class="form-control" placeholder="Ár" required>

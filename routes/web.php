@@ -16,5 +16,7 @@ Auth::routes();
 
 Route::get('/', 'WelcomeController@index')->name('welcome');
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/adkave', 'KaveController@index')->name('adkave');
-Route::resource('/kave', 'KaveController')->except(['show,destroy'])->middleware('auth');
+Route::get('/adkave', 'KaveController@index')->middleware('auth')->name('adkave');
+Route::resource('/kave', 'KaveController')->middleware('auth');
+Route::get('/adhotdrinks', 'HotdrinkController@index')->middleware('auth')->name('adhotdrinks');
+Route::resource('/hotdrinks', 'HotdrinkController')->middleware('auth');

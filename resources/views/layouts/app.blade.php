@@ -66,6 +66,7 @@ $pages=[
                             </a>
 
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="{{ url('/adhotdrinks') }}">Meleg italok szerkesztése</a>
                                 <a class="dropdown-item" href="{{ url('/adkave') }}">Kávé különlegességek szerkesztése</a>
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
