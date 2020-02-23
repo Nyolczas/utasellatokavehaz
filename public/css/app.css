@@ -3,7 +3,13 @@
 body {
   background-image: linear-gradient(rgba(255, 255, 255, 0.65), rgba(255, 255, 255, 0.65)), url(/images/pattern.svg?87b0ffb541ff0b35022a629104a63d5d);
   background-size: 5rem;
-  padding-top: 55px;
+  padding-top: 53px;
+}
+
+@media (min-width: 992px) {
+  body {
+    padding-top: 55px;
+  }
 }
 
 @font-face {
@@ -10959,6 +10965,49 @@ a.text-dark:focus {
   border: none;
 }
 
+.form-control {
+  color: #634115;
+  border: 1px solid rgba(229, 194, 130, 0.5);
+}
+
+::-webkit-input-placeholder {
+  color: #634115;
+  opacity: 1;
+  /* Firefox */
+}
+
+::-moz-placeholder {
+  color: #634115;
+  opacity: 1;
+  /* Firefox */
+}
+
+:-ms-input-placeholder {
+  color: #634115;
+  opacity: 1;
+  /* Firefox */
+}
+
+::-ms-input-placeholder {
+  color: #634115;
+  opacity: 1;
+  /* Firefox */
+}
+
+::placeholder {
+  color: #634115;
+  opacity: 1;
+  /* Firefox */
+}
+
+.form-control::-webkit-input-placeholder {
+  color: #634115;
+}
+
+hr {
+  border-top: 1px solid rgba(229, 194, 130, 0.5);
+}
+
 .white-header {
   background-color: white;
   color: #E5C282;
@@ -10966,6 +11015,20 @@ a.text-dark:focus {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
   box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card {
+  border: 1px solid rgba(229, 194, 130, 0.5);
+}
+
+.card-footer {
+  background-color: rgba(229, 194, 130, 0.25);
+  border-top: 1px solid rgba(229, 194, 130, 0.5);
+}
+
+.card-header {
+  background-color: rgba(229, 194, 130, 0.25);
+  border-bottom: 1px solid rgba(229, 194, 130, 0.5);
 }
 
 .carousel-img {
@@ -11004,6 +11067,10 @@ a.text-dark:focus {
   margin-bottom: 1.5rem;
 }
 
+.tetel-card {
+  position: relative;
+}
+
 .name {
   font-weight: bolder;
 }
@@ -11023,5 +11090,25 @@ a.text-dark:focus {
 .price {
   font-weight: bolder;
   text-align: right;
+  color: #634115;
+}
+
+.input-rank {
+  width: 5.8rem;
+  background-color: #E5C282;
+  color: #634115;
+  font-weight: bold;
+  border-radius: 0.25rem;
+  text-align: center;
+}
+
+.op-0 {
+  opacity: 0;
+}
+
+.tetel-delete-btn {
+  position: absolute;
+  bottom: 12px;
+  right: 20px;
 }
 

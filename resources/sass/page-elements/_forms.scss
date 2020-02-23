@@ -1,3 +1,22 @@
 .input-hide {
     border: none;
 }
+
+.form-control {
+    color: $barna;
+    border: 1px solid rgba($gold, .5);
+}
+
+::placeholder {
+    color: $barna;
+    opacity: 1;
+    /* Firefox */
+}
+
+.form-control::-webkit-input-placeholder {
+    color: $barna;
+}
+
+hr {
+    border-top: 1px solid rgba($gold, .5);
+}

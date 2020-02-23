@@ -13,6 +13,24 @@ class KaveController extends Controller
         $this->kave = $kave;
     }
 
+    public function index()
+    {
+
+        $kave = Kave::all()->sort(function ($a,$b) {
+            return $a->rank <=> $b->rank;
+        });
+
+        return view('admin.kave.adkave', ['kave' => $kave]);
+    }
+
+    public function show(Request $request, $id)
+    {
+        $kave = Kave::findOrFail($id);
+        $kave->delete();
+        $request->session()->flash('status', 'Sikeres törlés!');
+        return redirect('/adkave');
+    }
+
     public function store(Request $request)
     {
         $kave = new Kave();
@@ -20,7 +38,7 @@ class KaveController extends Controller
         //dd($request);
         $this->kave->saveKave($request, $kave);
         $request->session()->flash('status', 'Az új kávé különlegességet sikeresen hozzáadtad!');
-        return redirect('/admenu');
+        return redirect('/adkave');
     }
 
     public function update(Request $request, $id)
@@ -28,11 +46,16 @@ class KaveController extends Controller
         $kave = Kave::findOrFail($id);
 
         $this->kave->saveKave($request, $kave);
-        return redirect('/admenu');
+        $request->session()->flash('status', 'Sikeres módosítás!');
+        return redirect('/adkave');
 
     }
-    public function destroy($id)
+
+    public function destroy(Request $request, $id)
     {
-        //
+        $kave = Kave::findOrFail($id);
+        $kave->delete();
+        $request->session()->flash('status', 'Sikeres törlés!');
+        return redirect('/adkave');
     }
 }

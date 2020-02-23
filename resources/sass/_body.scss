@@ -1,0 +1,11 @@
+// Body
+$body-bg: white;
+$bg-over: rgba(white, .65);
+body {
+    background-image: linear-gradient($bg-over, $bg-over), url('img/decor/pattern.svg');
+    background-size: 5rem;
+    padding-top: 53px;
+    @media(min-width: 992px) {
+        padding-top: 55px;
+    }
+}

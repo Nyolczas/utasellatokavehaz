@@ -20,7 +20,12 @@ class MenuController extends Controller
      */
     public function index()
     {
-        return view('admenu', ['kave' => Kave::all()]);
+
+        $kave = Kave::all()->sort(function ($a,$b) {
+            return $a->rank <=> $b->rank;
+        });
+
+        return view('adkave', ['kave' => $kave]);
     }
 
     /**

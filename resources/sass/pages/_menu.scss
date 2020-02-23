@@ -2,6 +2,10 @@
     margin-bottom: 1.5rem;
 }
 
+.tetel-card {
+    position: relative;
+}
+
 .name{
     font-weight: bolder;
 }
@@ -20,4 +24,24 @@
 .price {
     font-weight: bolder;
     text-align: right;
+    color: $barna;
+}
+
+.input-rank{
+    width: 5.8rem;
+    background-color: $gold;
+    color: $barna;
+    font-weight: bold;
+    border-radius: .25rem;
+    text-align: center;
+}
+
+.op-0{
+    opacity: 0;
+}
+
+.tetel-delete-btn{
+    position: absolute;
+    bottom: 12px;
+    right: 20px;
 }

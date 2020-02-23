@@ -12,7 +12,11 @@ class Kave extends Model
     public function saveKave($request, $kave)
     {
       $kave->name = $request->input('name');
-      $kave->description = $request->input('description');
+      $inputDesc = $request->input('description');
+      if($inputDesc == null) {
+          $inputDesc = " ";
+      }
+      $kave->description = $inputDesc;
       $kave->price = $request->input('price');
       $kave->rank = $request->input('rank');
       $kave->save();

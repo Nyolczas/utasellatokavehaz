@@ -1,5 +1,7 @@
 // Variables
-@import 'variables';
+@import 'body';
+@import 'typography';
+@import 'colors';
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
@@ -8,6 +10,7 @@
 @import 'page-elements/keret';
 @import 'page-elements/forms';
 @import 'page-elements/white-header';
+@import 'page-elements/card';
 
 @import 'pages/carousel';
 @import 'pages/menu';

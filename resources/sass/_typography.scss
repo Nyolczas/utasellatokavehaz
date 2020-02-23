@@ -1,0 +1,16 @@
+// Typography
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Lobster|Noto+Serif:400,700&display=swap&subset=latin-ext');
+$font-family-heading: 'Lobster', cursive;
+$font-family-sans-serif: 'Noto Serif', serif;
+$font-size-base: 0.9rem;
+$line-height-base: 1.6;
+
+@font-face {
+    font-family: arecibo;
+    src: url('/fonts/arecibo.ttf');
+}
+
+.heading{
+    font-family: $font-family-heading;
+}
