@@ -9,11 +9,7 @@
 </div>
 @endif
 
-<div class="w-100 white-header d-flex justify-content-center align-items-center mb-5">
-    <img src="{{ asset('/img/decor/deko-bal.png') }}" alt="deko-bal" class="mr-3">
-    <h1 class="heading mb-1">Menü</h1>
-    <img src="{{ asset('/img/decor/deko-jobb.png') }}" alt="deko-jobb" class="ml-3">
-</div>
+@include('includes.whiteheader', ['title' => 'Menü'])
 
 <div class="container mt-4">
     <div class="d-flex flex-wrap">
@@ -22,8 +18,9 @@
                 <h2 class="text-center heading">Kávé különlegességek</h2>
                 <hr>
                 @forelse ($kave as $kv)
-
-                @include('admin.kave._tetelCard')
+                @include('admin.kave._tetelCard', [
+                    'tetel' => $kv
+                ])
                 @empty
                 <p>Nincs még kávé különlegesség hozzáadva!</p>
                 @endforelse
