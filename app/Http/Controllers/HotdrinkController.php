@@ -20,7 +20,7 @@ class HotdrinkController extends Controller
             return $a->rank <=> $b->rank;
         });
 
-        return view('admin.hotdrinks.adhotdrinks', ['hotdrinks' => $hotdrinks]);
+        return view('pages.adhotdrinks', ['hotdrinks' => $hotdrinks]);
     }
 
     public function show(Request $request, $id)

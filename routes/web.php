@@ -20,3 +20,5 @@ Route::get('/adkave', 'KaveController@index')->middleware('auth')->name('adkave'
 Route::resource('/kave', 'KaveController')->middleware('auth');
 Route::get('/adhotdrinks', 'HotdrinkController@index')->middleware('auth')->name('adhotdrinks');
 Route::resource('/hotdrinks', 'HotdrinkController')->middleware('auth');
+Route::get('/adsoftdrink', 'SoftdrinkController@index')->middleware('auth')->name('adsoftdrink');
+Route::resource('/softdrink', 'SoftdrinkController')->middleware('auth');

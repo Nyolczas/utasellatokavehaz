@@ -39,7 +39,7 @@
                         </div>
                         <div class="d-flex flex-wrap">
                             <div class="form-group col-6 pl-0">
-                                <input type="number" name="rank" class="form-control  input-rank" value={{ $kave[count($kave)-1]->rank + 10 }} required>
+                                <input type="number" name="rank" class="form-control  input-rank" value={{ (count($kave) >= 1) ? $kave[count($kave)-1]->rank + 10 : 10 }} required>
                             </div>
                             <div class="form-group col-6 pr-0">
                                 <input type="text" name="price" class="form-control" placeholder="Ár" required>
