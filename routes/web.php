@@ -22,3 +22,5 @@ Route::get('/adhotdrinks', 'HotdrinkController@index')->middleware('auth')->name
 Route::resource('/hotdrinks', 'HotdrinkController')->middleware('auth');
 Route::get('/adsoftdrink', 'SoftdrinkController@index')->middleware('auth')->name('adsoftdrink');
 Route::resource('/softdrink', 'SoftdrinkController')->middleware('auth');
+Route::get('/adfruit', 'FruitController@index')->middleware('auth')->name('adfruit');
+Route::resource('/fruit', 'FruitController')->middleware('auth');

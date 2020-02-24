@@ -37,7 +37,7 @@ class SoftdrinkController extends Controller
 
         //dd($request);
         $this->softdrink->saveSoftdrink($request, $softdrink);
-        $request->session()->flash('status', 'Az új kávé különlegességet sikeresen hozzáadtad!');
+        $request->session()->flash('status', 'Az új üdítőitalt sikeresen hozzáadtad!');
         return redirect('/adsoftdrink');
     }
 

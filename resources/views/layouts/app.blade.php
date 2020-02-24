@@ -69,6 +69,7 @@ $pages=[
                                 <a class="dropdown-item" href="{{ url('/adhotdrinks') }}">Meleg italok</a>
                                 <a class="dropdown-item" href="{{ url('/adkave') }}">Kávé különlegességek</a>
                                 <a class="dropdown-item" href="{{ url('/adsoftdrink') }}">Üdítők</a>
+                                <a class="dropdown-item" href="{{ url('/adfruit') }}">Gyümölcslevek</a>
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
