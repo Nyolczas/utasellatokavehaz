@@ -18,16 +18,37 @@
                 <h2 class="text-center heading">Üdítők</h2>
                 <hr>
                 <div class="row">
-                    <div class="col-9">
+                    <div class="col-8 pr-1">
                         @forelse ($softdrink as $sd)
                         @include('includes.tetelAdminEgysegar', [
                             'tetel' => $sd,
                             'update' => route('softdrink.update', ['softdrink' => $sd->id]),
-                            'destroy' => route('softdrink.destroy', ['softdrink' => $sd->id])
+                            'destroy' => route('softdrink.destroy', ['softdrink' => $sd->id]),
+                            'areaRows' => 1
                         ])
                         @empty
                         <p>Nincs még üdítő hozzáadva!</p>
                         @endforelse
+                    </div>
+                    <div class="col-4 pl-0 pb-2">
+                        <form method="POST" action="{{ route('softdrink.update', ['softdrink' => 1]) }}" class="card h-100">
+                            @csrf
+                            @method('PUT')
+                            <div class="card-body d-flex p-0">
+                                <div class="col-4 m-0 px-1 py-3">
+                                    <img class="bracket" src="{{ asset('/img/decor/bracket.png') }}" alt="bracket">
+                                </div>
+                                <div class="col-8 m-0 p-0 d-flex align-items-center justify-content-center">
+                                    <input type="hidden" name="name" value="{{ $softdrink[0]->name  }}">
+                                    <input type="hidden" name="description" value="{{ $softdrink[0]->description  }}">
+                                    <input type="hidden" name="rank" value="{{ $softdrink[0]->rank  }}">
+                                    <input type="text" name="price" class="col-3 px-0 input-hide price unit-price" value="{{ $softdrink[0]->price }}">
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <button class="btn btn-success btn-save mx-3" type="submit"></button>
+                            </div>
+                        </form>
                     </div>
                 </div>
                 <hr>

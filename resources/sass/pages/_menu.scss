@@ -27,8 +27,17 @@
     color: $barna;
 }
 
+.unit-price {
+    min-width: 100%;
+    text-align: center;
+}
+
+.bracket {
+    width: 100%;
+      height: 100%;
+}
 .input-rank{
-    width: 5.8rem;
+    width: 5.4rem;
     background-color: $gold;
     color: $barna;
     font-weight: bold;

@@ -1,0 +1,15 @@
+.btn-save {
+    background-image: url(img/decor/icon-save.svg);
+}
+
+.btn-delete {
+    background-image: url(img/decor/icon-delete.svg);
+}
+
+.btn-save, .btn-delete {
+    width: 26px;
+    height: 26px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
