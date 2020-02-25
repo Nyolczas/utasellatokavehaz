@@ -24,3 +24,6 @@ Route::get('/adsoftdrink', 'SoftdrinkController@index')->middleware('auth')->nam
 Route::resource('/softdrink', 'SoftdrinkController')->middleware('auth');
 Route::get('/adfruit', 'FruitController@index')->middleware('auth')->name('adfruit');
 Route::resource('/fruit', 'FruitController')->middleware('auth');
+Route::get('/admineralsyrup', 'MineralController@index')->middleware('auth')->name('admineralsyrup');
+Route::resource('/mineral', 'MineralController')->middleware('auth');
+Route::resource('/syrup', 'SyrupController')->middleware('auth');

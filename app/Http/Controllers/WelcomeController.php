@@ -8,6 +8,8 @@ use App\Kave;
 use App\Hotdrinks;
 use App\Softdrink;
 use App\Fruit;
+use App\Mineral;
+use App\Syrup;
 
 class WelcomeController extends Controller
 {
@@ -29,12 +31,22 @@ class WelcomeController extends Controller
             return $a->rank <=> $b->rank;
         });
 
+        $mineral = Mineral::all()->sort(function ($a,$b) {
+            return $a->rank <=> $b->rank;
+        });
+
+        $syrup = Syrup::all()->sort(function ($a,$b) {
+            return $a->rank <=> $b->rank;
+        });
+
         return view(
             'welcome', [
                 'kave' => $kave,
                 'hotdrinks' => $hotdrinks,
                 'softdrink' => $softdrink,
-                'fruit' => $fruit
+                'fruit' => $fruit,
+                'mineral' => $mineral,
+                'syrup' => $syrup
                 ]);
     }
 }

@@ -6,7 +6,7 @@
             <div class="d-flex">
                 <div class="col-8">
                     @forelse ($softdrink as $sd)
-                    <div class="tetel">
+                    <div class="tetel-unit">
                         <p class="name">{{ $sd->name  }}</p>
                         <p class="desc">{{ $sd->description }}</p>
                     </div>
@@ -31,7 +31,7 @@
             <div class="d-flex">
                 <div class="col-8">
                     @forelse ($fruit as $fr)
-                    <div class="tetel">
+                    <div class="tetel-unit">
                         <p class="name">{{ $fr->name  }}</p>
                         <p class="desc">{{ $fr->description }}</p>
                     </div>
@@ -50,6 +50,38 @@
                     </div>
                 </div>
             </div>
+            {{-- ásványvizek start --}}
+            <hr>
+            <h2 class="text-center heading">Ásványvizek</h2>
+            <hr>
+            @forelse ($mineral as $mr)
+            <div class="d-flex align-items-end tetel">
+                <div class="col-9 px-0">
+                    <p class="name">{{ $mr->name  }}</p>
+                    <p class="desc">{{ $mr->description }}</p>
+                </div>
+                <p class="col-3 px-0 price mb-0" >{{ $mr->price }}</p>
+            </div>
+            @empty
+            <p>Nincs még ásványvíz hozzáadva!</p>
+            @endforelse
+            {{-- ásványvizek end --}}
+            {{-- szörpök start --}}
+            <hr>
+            <h2 class="text-center heading">Szörpök</h2>
+            <hr>
+            @forelse ($syrup as $sr)
+            <div class="d-flex align-items-end tetel">
+                <div class="col-9 px-0">
+                    <p class="name">{{ $sr->name  }}</p>
+                    <p class="desc">{{ $sr->description }}</p>
+                </div>
+                <p class="col-3 px-0 price mb-0" >{{ $sr->price }}</p>
+            </div>
+            @empty
+            <p>Nincs még ásványvíz hozzáadva!</p>
+            @endforelse
+            {{-- szörpök end --}}
         </div>
     </div>
 </div>
