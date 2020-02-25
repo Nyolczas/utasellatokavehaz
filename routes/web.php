@@ -27,3 +27,7 @@ Route::resource('/fruit', 'FruitController')->middleware('auth');
 Route::get('/admineralsyrup', 'MineralController@index')->middleware('auth')->name('admineralsyrup');
 Route::resource('/mineral', 'MineralController')->middleware('auth');
 Route::resource('/syrup', 'SyrupController')->middleware('auth');
+Route::get('/adalcohol', 'BeerController@index')->middleware('auth')->name('adalcohol');
+Route::resource('/beer', 'BeerController')->middleware('auth');
+Route::resource('/wine', 'WineController')->middleware('auth');
+Route::resource('/spirit', 'SpiritController')->middleware('auth');

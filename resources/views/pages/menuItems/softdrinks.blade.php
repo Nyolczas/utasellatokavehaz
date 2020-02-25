@@ -1,6 +1,7 @@
 <div class="col-12 col-md-6 col-xl-4">
     <div class="keret">
         <div class="keret-bel p-4">
+            {{-- Üdítők start --}}
             <h2 class="text-center heading">Üdítők</h2>
             <hr>
             <div class="d-flex">
@@ -25,6 +26,8 @@
                     </div>
                 </div>
             </div>
+            {{-- Üdítők end --}}
+            {{-- Gyümölcslevek start --}}
             <hr>
             <h2 class="text-center heading">Gyümölcslevek</h2>
             <hr>
@@ -50,6 +53,7 @@
                     </div>
                 </div>
             </div>
+            {{-- Gyümölcslevek end --}}
             {{-- ásványvizek start --}}
             <hr>
             <h2 class="text-center heading">Ásványvizek</h2>
