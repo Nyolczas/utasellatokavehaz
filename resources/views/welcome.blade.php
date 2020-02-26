@@ -21,6 +21,7 @@
         @include('pages.menuItems.hotdrinks')
         @include('pages.menuItems.kave')
         @include('pages.menuItems.softdrinks')
+        @include('pages.menuItems.alcohols')
     </div>
 </div>
 @endsection

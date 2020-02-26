@@ -10,6 +10,9 @@ use App\Softdrink;
 use App\Fruit;
 use App\Mineral;
 use App\Syrup;
+use App\Beer;
+use App\Wine;
+use App\Spirit;
 
 class WelcomeController extends Controller
 {
@@ -39,6 +42,18 @@ class WelcomeController extends Controller
             return $a->rank <=> $b->rank;
         });
 
+        $beer = Beer::all()->sort(function ($a,$b) {
+            return $a->rank <=> $b->rank;
+        });
+
+        $wine = Wine::all()->sort(function ($a,$b) {
+            return $a->rank <=> $b->rank;
+        });
+
+        $spirit = Spirit::all()->sort(function ($a,$b) {
+            return $a->rank <=> $b->rank;
+        });
+
         return view(
             'welcome', [
                 'kave' => $kave,
@@ -46,7 +61,10 @@ class WelcomeController extends Controller
                 'softdrink' => $softdrink,
                 'fruit' => $fruit,
                 'mineral' => $mineral,
-                'syrup' => $syrup
+                'syrup' => $syrup,
+                'beer' => $beer,
+                'wine' => $wine,
+                'spirit' => $spirit,
                 ]);
     }
 }
