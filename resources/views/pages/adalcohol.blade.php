@@ -77,7 +77,7 @@
                             @method('PUT')
                             <div class="card-body d-flex p-0">
                                 <div class="col-4 m-0 px-1 py-3">
-                                    <img class="bracket" src="{{ asset('/img/decor/bracket.png') }}" alt="bracket">
+                                    @include('includes.bracket')
                                 </div>
                                 <div class="col-8 m-0 p-0 d-flex align-items-center justify-content-center">
                                     <input type="hidden" name="name" value="{{ $wine[0]->name  }}">
@@ -141,7 +141,7 @@
                             @method('PUT')
                             <div class="card-body d-flex p-0">
                                 <div class="col-4 m-0 px-1 py-3">
-                                    <img class="bracket" src="{{ asset('/img/decor/bracket.png') }}" alt="bracket">
+                                    @include('includes.bracket')
                                 </div>
                                 <div class="col-8 m-0 p-0 d-flex align-items-center justify-content-center">
                                     <input type="hidden" name="name" value="{{ $spirit[0]->name  }}">
