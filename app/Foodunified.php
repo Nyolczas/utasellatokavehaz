@@ -21,21 +21,21 @@ class Foodunified extends Model
       $foodunified->price = $request->input('price');
       $foodunified->rank = $request->input('rank');
 
-      $inputVegan = false;
+      $inputVegan = 0;
       if($request->input('is_vegan') == "true"){
-          $inputVegan = true;
+          $inputVegan = 1;
       }
-      $inputGluten = false;
+      $inputGluten = 0;
       if($request->input('contains_gluten') == "true"){
-          $inputGluten = true;
+          $inputGluten = 1;
       }
-      $inputLactose = false;
+      $inputLactose = 0;
       if($request->input('contains_lactose') == "true"){
-          $inputLactose = true;
+          $inputLactose = 1;
       }
-      $inputEggs = false;
+      $inputEggs = 0;
       if($request->input('contains_eggs') == "true"){
-          $inputEggs = true;
+          $inputEggs = 1;
       }
 
       $foodunified->is_vegan = $inputVegan;

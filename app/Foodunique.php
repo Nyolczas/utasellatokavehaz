@@ -19,10 +19,28 @@ class Foodunique extends Model
       $foodunique->description = $inputDesc;
       $foodunique->price = $request->input('price');
       $foodunique->rank = $request->input('rank');
-      $foodunique->is_vegan = $request->input('is_vegan');
-      $foodunique->contains_gluten = $request->input('contains_gluten');
-      $foodunique->contains_lactose = $request->input('contains_lactose');
-      $foodunique->contains_eggs = $request->input('contains_eggs');
+
+      $inputVegan = 0;
+      if($request->input('is_vegan') == "true"){
+          $inputVegan = 1;
+      }
+      $inputGluten = 0;
+      if($request->input('contains_gluten') == "true"){
+          $inputGluten = 1;
+      }
+      $inputLactose = 0;
+      if($request->input('contains_lactose') == "true"){
+          $inputLactose = 1;
+      }
+      $inputEggs = 0;
+      if($request->input('contains_eggs') == "true"){
+          $inputEggs = 1;
+      }
+
+      $foodunique->is_vegan = $inputVegan;
+      $foodunique->contains_gluten = $inputGluten;
+      $foodunique->contains_lactose = $inputLactose;
+      $foodunique->contains_eggs = $inputEggs;
       $foodunique->save();
     }
 

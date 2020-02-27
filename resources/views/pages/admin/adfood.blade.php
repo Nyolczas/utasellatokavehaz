@@ -12,7 +12,7 @@
 @include('includes.whiteheader', ['title' => 'Ételek szerkesztése'])
 
 <div class="container mt-4">
-    <div class="d-flex flex-wrap justify-content-center">
+    <div class="d-flex flex-wrap justify-content-center align-items-start">
         {{-- Egységáras ételek START --}}
         <div class="col-12 col-md-6 col-xl-4 keret mx-auto">
             <div class="keret-bel p-2">
@@ -21,7 +21,7 @@
                 <div class="row">
                     <div class="col-8 pr-1">
                         @forelse ($foodunified as $fuf)
-                        @include('includes.tetelAdminEgysegar', [
+                        @include('includes.etel_tetel_admin_egysegar', [
                             'tetel' => $fuf,
                             'update' => route('foodunified.update', ['foodunified' => $fuf->id]),
                             'destroy' => route('foodunified.destroy', ['foodunified' => $fuf->id]),
@@ -62,15 +62,16 @@
                         <div class="form-group">
                             <input type="text" name="name" class="form-control" placeholder="Név" required>
                         </div>
+                        <div class="form-group">
+                            <textarea rows="3" name="description" class="form-control"></textarea>
+                        </div>
                         @include('pages.admin._food_type_selectors', [
+                            'id' => 8888888,
                             'is_vegan' => 0,
                             'contains_gluten' => 0,
                             'contains_lactose' => 0,
                             'contains_eggs' => 0,
                             ])
-                        <div class="form-group">
-                            <textarea rows="3" name="description" class="form-control"></textarea>
-                        </div>
                         <div class="d-flex flex-wrap">
                             <div class="form-group">
                                 <input type="number" name="rank" class="form-control  input-rank" value={{ (count($foodunified) >= 1) ? $foodunified[count($foodunified)-1]->rank + 10 : 10 }} required>
@@ -89,7 +90,7 @@
                 <h2 class="text-center heading">Egyedi áras ételek</h2>
                 <hr>
                 @forelse ($foodunique as $fuq)
-                @include('includes.tetelAdminCard', [
+                @include('includes.etel_tetel_admin_card', [
                     'tetel' => $fuq,
                     'update' => route('foodunique.update', ['foodunique' => $fuq->id]),
                     'destroy' => route('foodunique.destroy', ['foodunique' => $fuq->id])
@@ -105,15 +106,16 @@
                         <div class="form-group">
                             <input type="text" name="name" class="form-control" placeholder="Név" required>
                         </div>
+                        <div class="form-group">
+                            <textarea rows="3" name="description" class="form-control"></textarea>
+                        </div>
                         @include('pages.admin._food_type_selectors', [
+                            'id' => 999999,
                             'is_vegan' => 0,
                             'contains_gluten' => 0,
                             'contains_lactose' => 0,
                             'contains_eggs' => 0,
                             ])
-                        <div class="form-group">
-                            <textarea rows="3" name="description" class="form-control"></textarea>
-                        </div>
                         <div class="d-flex flex-wrap">
                             <div class="form-group col-6 pl-0">
                                 <input type="number" name="rank" class="form-control  input-rank" value={{ (count($foodunique) >= 1) ? $foodunique[count($foodunique)-1]->rank + 10 : 10 }} required>
