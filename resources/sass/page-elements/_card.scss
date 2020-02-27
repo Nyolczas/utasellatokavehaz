@@ -12,4 +12,16 @@
     border-bottom: 1px solid rgba($gold, .5);
 }
 
+.custom-control{
+    cursor: pointer;
+
+    .custom-control-label {
+        cursor: pointer;
+
+        &::before{
+            border: 1px solid rgba($gold, .5);
+        }
+    }
+}
+
 

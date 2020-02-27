@@ -31,3 +31,6 @@ Route::get('/adalcohol', 'BeerController@index')->middleware('auth')->name('adal
 Route::resource('/beer', 'BeerController')->middleware('auth');
 Route::resource('/wine', 'WineController')->middleware('auth');
 Route::resource('/spirit', 'SpiritController')->middleware('auth');
+Route::get('/adfood', 'FoodunifiedController@index')->middleware('auth')->name('adfood');
+Route::resource('/foodunified', 'FoodunifiedController')->middleware('auth');
+Route::resource('/foodunique', 'FooduniqueController')->middleware('auth');

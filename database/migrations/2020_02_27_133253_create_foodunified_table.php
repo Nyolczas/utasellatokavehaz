@@ -16,6 +16,14 @@ class CreateFoodunifiedTable extends Migration
         Schema::create('foodunified', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->timestamps();
+            $table->text('name');
+            $table->text('description');
+            $table->text('price');
+            $table->integer('rank');
+            $table->boolean('is_vegan');
+            $table->boolean('contains_gluten');
+            $table->boolean('contains_lactose');
+            $table->boolean('contains_eggs');
         });
     }
 

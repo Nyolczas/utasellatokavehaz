@@ -70,8 +70,9 @@ $pages=[
                                 <a class="dropdown-item" href="{{ url('/adkave') }}">Kávé különlegességek</a>
                                 <a class="dropdown-item" href="{{ url('/adsoftdrink') }}">Üdítők</a>
                                 <a class="dropdown-item" href="{{ url('/adfruit') }}">Gyümölcslevek</a>
-                                <a class="dropdown-item" href="{{ url('/admineralsyrup') }}">Ásványvizel és Szörpök</a>
+                                <a class="dropdown-item" href="{{ url('/admineralsyrup') }}">Ásványvizek és Szörpök</a>
                                 <a class="dropdown-item" href="{{ url('/adalcohol') }}">Szeszes italok</a>
+                                <a class="dropdown-item" href="{{ url('/adfood') }}">Ételek</a>
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">

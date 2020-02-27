@@ -11031,6 +11031,18 @@ hr {
   border-bottom: 1px solid rgba(229, 194, 130, 0.5);
 }
 
+.custom-control {
+  cursor: pointer;
+}
+
+.custom-control .custom-control-label {
+  cursor: pointer;
+}
+
+.custom-control .custom-control-label::before {
+  border: 1px solid rgba(229, 194, 130, 0.5);
+}
+
 .btn-save {
   background-image: url(/images/icon-save.svg?47053f611ba098d534d3f24f49185bf4);
 }
