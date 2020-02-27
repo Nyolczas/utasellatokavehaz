@@ -13,6 +13,10 @@ use App\Syrup;
 use App\Beer;
 use App\Wine;
 use App\Spirit;
+use App\Foodunified;
+use App\Foodunique;
+use App\Foodextra;
+use App\Salad;
 
 class WelcomeController extends Controller
 {
@@ -54,6 +58,22 @@ class WelcomeController extends Controller
             return $a->rank <=> $b->rank;
         });
 
+        $foodunified = Foodunified::all()->sort(function ($a,$b) {
+            return $a->rank <=> $b->rank;
+        });
+
+        $foodunique = Foodunique::all()->sort(function ($a,$b) {
+            return $a->rank <=> $b->rank;
+        });
+
+        $foodextra = Foodextra::all()->sort(function ($a,$b) {
+            return $a->rank <=> $b->rank;
+        });
+
+        $salad = Salad::all()->sort(function ($a,$b) {
+            return $a->rank <=> $b->rank;
+        });
+
         return view(
             'welcome', [
                 'kave' => $kave,
@@ -65,6 +85,10 @@ class WelcomeController extends Controller
                 'beer' => $beer,
                 'wine' => $wine,
                 'spirit' => $spirit,
+                'foodunified' => $foodunified,
+                'foodunique' => $foodunique,
+                'foodextra' => $foodextra,
+                'salad' => $salad,
                 ]);
     }
 }

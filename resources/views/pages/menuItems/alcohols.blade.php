@@ -21,7 +21,7 @@
             <h2 class="text-center heading">Borok</h2>
             <hr>
             <div class="d-flex">
-                <div class="col-8">
+                <div class="col-9 p-0">
                     @foreach ($wine as $wn)
                     <div class="tetel-unit">
                         <p class="name">{{ $wn->name  }}</p>
@@ -29,12 +29,12 @@
                     </div>
                     @endforeach
                 </div>
-                <div class="col-4">
+                <div class="col-3 p-0">
                     <div class="d-flex p-0 h-100">
-                        <div class="col-4 m-0 px-1 py-3">
+                        <div class="col-5 m-0 px-1 py-3">
                             @include('includes.bracket')
                         </div>
-                        <div class="col-8 m-0 p-0 d-flex align-items-center justify-content-center">
+                        <div class="col-7 m-0 p-0 d-flex align-items-center justify-content-center">
                             <p class="col-3 px-0 input-hide price unit-price">{{ $wine[0]->price }}</p>
                         </div>
                     </div>
@@ -48,19 +48,19 @@
             <h2 class="text-center heading">Rövid italok</h2>
             <hr>
             <div class="d-flex">
-                <div class="col-8">
+                <div class="col-9 p-0">
                     @foreach ($spirit as $sp)
                     <div class="tetel-unit">
                         <p class="mb-0"> <span class="name">{{ $sp->name  }}</span> <span class="desc pl-0">{{ $sp->description }}</span> </p>
                     </div>
                     @endforeach
                 </div>
-                <div class="col-4">
+                <div class="col-3 p-0">
                     <div class="d-flex p-0 h-100">
-                        <div class="col-4 m-0 px-1 py-3">
+                        <div class="col-5 m-0 px-1 py-3">
                             @include('includes.bracket')
                         </div>
-                        <div class="col-8 m-0 p-0 d-flex align-items-center justify-content-center">
+                        <div class="col-7 m-0 p-0 d-flex align-items-center justify-content-center">
                             <p class="col-3 px-0 input-hide price unit-price">{{ $spirit[0]->price }}</p>
                         </div>
                     </div>

@@ -6,7 +6,7 @@
             <h2 class="text-center heading">Üdítők</h2>
             <hr>
             <div class="d-flex">
-                <div class="col-8">
+                <div class="col-9 p-0">
                     @foreach ($softdrink as $sd)
                     <div class="tetel-unit">
                         <p class="name">{{ $sd->name  }}</p>
@@ -14,12 +14,12 @@
                     </div>
                     @endforeach
                 </div>
-                <div class="col-4">
+                <div class="col-3 p-0">
                     <div class="d-flex p-0 h-100">
-                        <div class="col-4 m-0 px-1 py-3">
+                        <div class="col-5 m-0 px-1 py-3">
                             @include('includes.bracket')
                         </div>
-                        <div class="col-8 m-0 p-0 d-flex align-items-center justify-content-center">
+                        <div class="col-7 m-0 p-0 d-flex align-items-center justify-content-center">
                             <p class="col-3 px-0 input-hide price unit-price">{{ $softdrink[0]->price }}</p>
                         </div>
                     </div>
@@ -33,19 +33,19 @@
             <h2 class="text-center heading">Gyümölcslevek</h2>
             <hr>
             <div class="d-flex">
-                <div class="col-8">
+                <div class="col-9 p-0">
                     @foreach ($fruit as $fr)
                     <div class="tetel-unit">
                         <p class="mb-0"> <span class="name">{{ $fr->name  }}</span> <span class="desc pl-0">{{ $fr->description }}</span> </p>
                     </div>
                     @endforeach
                 </div>
-                <div class="col-4">
+                <div class="col-3 p-0">
                     <div class="d-flex p-0 h-100">
-                        <div class="col-4 m-0 px-1 py-3">
+                        <div class="col-5 m-0 px-1 py-3">
                             @include('includes.bracket')
                         </div>
-                        <div class="col-8 m-0 p-0 d-flex align-items-center justify-content-center">
+                        <div class="col-7 m-0 p-0 d-flex align-items-center justify-content-center">
                             <p class="col-3 px-0 input-hide price unit-price">{{ $fruit[0]->price }}</p>
                         </div>
                     </div>
