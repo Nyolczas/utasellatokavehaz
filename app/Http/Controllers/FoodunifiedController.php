@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 
 use App\Foodunified;
 use App\Foodunique;
+use App\Foodextra;
+use App\Salad;
 
 class FoodunifiedController extends Controller
 {
@@ -24,7 +26,20 @@ class FoodunifiedController extends Controller
             return $a->rank <=> $b->rank;
         });
 
-        return view('pages.admin.adfood', ['foodunified' => $foodunified, 'foodunique' => $foodunique]);
+        $foodextra = Foodextra::all()->sort(function ($a,$b) {
+            return $a->rank <=> $b->rank;
+        });
+
+        $salad = Salad::all()->sort(function ($a,$b) {
+            return $a->rank <=> $b->rank;
+        });
+
+        return view('pages.admin.adfood', [
+            'foodunified' => $foodunified,
+            'foodunique' => $foodunique,
+            'foodextra' => $foodextra,
+            'salad' => $salad,
+            ]);
     }
 
     public function show(Request $request, $id)

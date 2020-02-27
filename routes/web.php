@@ -34,3 +34,5 @@ Route::resource('/spirit', 'SpiritController')->middleware('auth');
 Route::get('/adfood', 'FoodunifiedController@index')->middleware('auth')->name('adfood');
 Route::resource('/foodunified', 'FoodunifiedController')->middleware('auth');
 Route::resource('/foodunique', 'FooduniqueController')->middleware('auth');
+Route::resource('/foodextra', 'FoodextraController')->middleware('auth');
+Route::resource('/salad', 'SaladController')->middleware('auth');

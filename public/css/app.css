@@ -10955,6 +10955,7 @@ a.text-dark:focus {
   padding: 0.5rem;
   box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
   color: #634115;
+  margin-bottom: 30px;
 }
 
 .keret-bel {
