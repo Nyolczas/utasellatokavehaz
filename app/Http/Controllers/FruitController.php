@@ -20,7 +20,7 @@ class FruitController extends Controller
             return $a->rank <=> $b->rank;
         });
 
-        return view('pages.adfruit', ['fruit' => $fruit]);
+        return view('pages.admin.adfruit', ['fruit' => $fruit]);
     }
 
     public function show(Request $request, $id)

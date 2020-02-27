@@ -20,7 +20,7 @@
             <hr>
             <h2 class="text-center heading">Borok</h2>
             <hr>
-            <div class="d-flex align-items-center">
+            <div class="d-flex">
                 <div class="col-8">
                     @foreach ($wine as $wn)
                     <div class="tetel-unit">
@@ -31,7 +31,7 @@
                 </div>
                 <div class="col-4">
                     <div class="d-flex p-0 h-100">
-                        <div class="col-4 m-0 px-1 pb-3">
+                        <div class="col-4 m-0 px-1 py-3">
                             @include('includes.bracket')
                         </div>
                         <div class="col-8 m-0 p-0 d-flex align-items-center justify-content-center">
@@ -47,7 +47,7 @@
             <hr>
             <h2 class="text-center heading">Rövid italok</h2>
             <hr>
-            <div class="d-flex align-items-center">
+            <div class="d-flex">
                 <div class="col-8">
                     @foreach ($spirit as $sp)
                     <div class="tetel-unit">
@@ -56,8 +56,8 @@
                     @endforeach
                 </div>
                 <div class="col-4">
-                    <div class="d-flex p-0">
-                        <div class="col-4 m-0 px-1 pb-3">
+                    <div class="d-flex p-0 h-100">
+                        <div class="col-4 m-0 px-1 py-3">
                             @include('includes.bracket')
                         </div>
                         <div class="col-8 m-0 p-0 d-flex align-items-center justify-content-center">

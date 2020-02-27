@@ -29,7 +29,7 @@ class WineController extends Controller
             return $a->rank <=> $b->rank;
         });
 
-        return view('pages.adalcohol', ['beer' => $beer, 'wine' => $wine, 'spirit' => $spirit]);
+        return view('pages.admin.adalcohol', ['beer' => $beer, 'wine' => $wine, 'spirit' => $spirit]);
     }
 
     public function show(Request $request, $id)

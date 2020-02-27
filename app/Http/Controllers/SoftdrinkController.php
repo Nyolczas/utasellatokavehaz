@@ -20,7 +20,7 @@ class SoftdrinkController extends Controller
             return $a->rank <=> $b->rank;
         });
 
-        return view('pages.adsoftdrink', ['softdrink' => $softdrink]);
+        return view('pages.admin.adsoftdrink', ['softdrink' => $softdrink]);
     }
 
     public function show(Request $request, $id)

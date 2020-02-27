@@ -25,7 +25,7 @@ class SyrupController extends Controller
             return $a->rank <=> $b->rank;
         });
 
-        return view('pages.admineralsyrup', ['syrup' => $syrup, 'mineral' => $mineral]);
+        return view('pages.admin.admineralsyrup', ['syrup' => $syrup, 'mineral' => $mineral]);
     }
 
     public function show(Request $request, $id)

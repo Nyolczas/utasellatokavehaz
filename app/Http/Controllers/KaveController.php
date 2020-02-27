@@ -20,7 +20,7 @@ class KaveController extends Controller
             return $a->rank <=> $b->rank;
         });
 
-        return view('pages.adkave', ['kave' => $kave]);
+        return view('pages.admin.adkave', ['kave' => $kave]);
     }
 
     public function show(Request $request, $id)
