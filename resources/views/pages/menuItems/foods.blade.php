@@ -40,7 +40,7 @@
             @endforeach
             @endif
             {{-- Egyedi áras ételek END --}}
-            {{-- Étel extrák ételek Start --}}
+            {{-- Étel extrák Start --}}
             @if(count($foodextra) > 0)
             @foreach ($foodextra as $extra)
             <div class="d-flex align-items-end tetel">
@@ -51,8 +51,22 @@
             </div>
             @endforeach
             @endif
-            {{-- Étel extrák ételek END --}}
-
+            {{-- Étel extrák END --}}
+            {{-- Saláták START --}}
+            @if(count($salad) > 0)
+            <hr>
+            <h2 class="text-center heading">Saláták</h2>
+            <hr>
+            @foreach ($salad as $sal)
+            <div class="d-flex align-items-end tetel">
+                <div class="col-9 px-0">
+                    <p class="name">{{ $sal->name  }}</p>
+                </div>
+                <p class="col-3 px-0 price mb-0" >{{ $sal->price }}</p>
+            </div>
+            @endforeach
+            @endif
+            {{-- Saláták END --}}
         </div>
     </div>
 </div>

@@ -15,6 +15,10 @@
     </div>
     <h1 class="welcome-main">Utasellátó Kávéház és Bisztró</h1>
 </div>
+{{-- Rólunk START --}}
+@include('pages.about')
+{{-- Rólunk END --}}
+{{-- Menü START --}}
 @include('includes.whiteheader', ['title' => 'Menü'])
 <div class="container py-4">
     <div class="row flex-wrap">
@@ -25,4 +29,5 @@
         @include('pages.menuItems.foods')
     </div>
 </div>
+{{-- Menü END --}}
 @endsection
