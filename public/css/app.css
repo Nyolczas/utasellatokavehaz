@@ -11100,6 +11100,12 @@ hr {
   }
 }
 
+.blackboard {
+  width: 100%;
+  height: 100%;
+  background-image: url(/images/blackboard.jpg?bec53faae18b914c922346076cd0a2b4);
+}
+
 .tetel {
   margin-bottom: 1.8rem;
 }
