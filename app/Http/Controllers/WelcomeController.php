@@ -17,6 +17,7 @@ use App\Foodunified;
 use App\Foodunique;
 use App\Foodextra;
 use App\Salad;
+use App\Opening;
 
 class WelcomeController extends Controller
 {
@@ -74,6 +75,8 @@ class WelcomeController extends Controller
             return $a->rank <=> $b->rank;
         });
 
+        $opening = Opening::all();
+
         return view(
             'welcome', [
                 'kave' => $kave,
@@ -89,6 +92,7 @@ class WelcomeController extends Controller
                 'foodunique' => $foodunique,
                 'foodextra' => $foodextra,
                 'salad' => $salad,
+                'opening' => $opening,
                 ]);
     }
 }

@@ -1,6 +1,6 @@
 <div class="container py-4 mb-4">
-    <div class="row flex-wrap">
-        <div class="col-12 col-md-6 col-lg-7 col-xl-8">
+    <div class="row flex-wrap pt-5 pb-4">
+        <div class="col-12 col-lg-7 col-xl-8 mb-5 mb-lg-0">
             <div class="keret mb-0">
                 <div class="keret-bel p-4">
                     <h2 class="text-center heading mb-4">Köszöntjük az Utasellátó Kávéházban</h2>
@@ -14,10 +14,13 @@ A több, mint százéves mozdony-csodák között sétálva az ember úgy érezh
                 </div>
             </div>
         </div>
-        <div class="col-12 col-md-6 col-lg-5 col-xl-4">
-            <div class="blackboard p-4 text-center">
+        <div class="col-12 col-lg-5 col-xl-4">
+            <div class="blackboard p-5 text-center">
                 <h2 class="heading text-gold">Nyitvatartás</h2>
-                <h3><b>Április 1 - Október 31.</b></h3>
+                <h4 class="text-gold mb-5"><b>Április 1 - Október 31.</b></h4>
+                @for ($i = 1; $i < 7; $i++)
+                <h5 class="text-off-white mb-3">{{ $opening[$i]->time }}</h5>
+                @endfor
             </div>
         </div>
     </div>

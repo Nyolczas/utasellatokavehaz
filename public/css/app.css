@@ -21,6 +21,14 @@ body {
   font-family: "Lobster", cursive;
 }
 
+.text-gold {
+  color: #E5C282;
+}
+
+.text-off-white {
+  color: #E8DDCC;
+}
+
 /*!
  * Bootstrap v4.4.1 (https://getbootstrap.com/)
  * Copyright 2011-2019 The Bootstrap Authors
@@ -11104,6 +11112,8 @@ hr {
   width: 100%;
   height: 100%;
   background-image: url(/images/blackboard.jpg?bec53faae18b914c922346076cd0a2b4);
+  background-size: cover;
+  background-position: center;
 }
 
 .tetel {
