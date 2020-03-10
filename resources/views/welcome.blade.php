@@ -18,6 +18,11 @@
 {{-- Rólunk START --}}
 @include('pages.about')
 {{-- Rólunk END --}}
+
+{{-- Image START --}}
+<div class="imageabout"></div>
+{{-- Image END --}}
+
 {{-- Menü START --}}
 @include('includes.whiteheader', ['title' => 'Menü'])
 <div class="container py-4">

@@ -12,14 +12,14 @@
 @include('includes.whiteheader', ['title' => 'Nyitvatartás módosítása'])
 
 <div class="container mt-4">
-    <div class="d-flex flex-wrap">
-        <div class="col-12 col-md-6 col-xl-4 keret mx-auto">
+    <div class="d-flex">
+        <div class="col-12 col-md-10 col-xl-5 keret mx-auto">
             <div class="keret-bel p-2">
                 <h2 class="text-center heading">Nyitvatartás</h2>
                 <form method="POST" action= "{{ route('opening.update', ['opening' => 1]) }}">
                     @csrf
                     @method('PUT')
-                    <div class="d-flex align-items-center card-body">
+                    <div class="d-flex align-items-center justify-content-center card-body">
                         <h5 class="col-7 px-0">
                             <input type="text" name="time" class="input-hide name" value="{{ $opening[0]->time  }}">
                         </h5>

@@ -11116,6 +11116,15 @@ hr {
   background-position: center;
 }
 
+.imageabout {
+  width: 100%;
+  height: 19vw;
+  min-height: 230px;
+  background-image: url(/images/imageabout.jpg?eebb2b9c14d702da520dfd897b585971);
+  background-size: cover;
+  background-position: center;
+}
+
 .tetel {
   margin-bottom: 1.8rem;
 }
