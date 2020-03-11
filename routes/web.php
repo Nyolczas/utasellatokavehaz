@@ -38,3 +38,5 @@ Route::resource('/foodextra', 'FoodextraController')->middleware('auth');
 Route::resource('/salad', 'SaladController')->middleware('auth');
 Route::get('/opening', 'OpeningController@index')->middleware('auth')->name('opening');
 Route::resource('/opening', 'OpeningController')->middleware('auth');
+Route::get('/actual', 'ActualController@index')->middleware('auth')->name('actual');
+Route::resource('/actual', 'ActualController')->middleware('auth');

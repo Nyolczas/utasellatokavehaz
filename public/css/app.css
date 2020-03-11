@@ -11108,6 +11108,10 @@ hr {
   }
 }
 
+.actual {
+  background-color: #6E0D0D;
+}
+
 .blackboard {
   width: 100%;
   height: 100%;

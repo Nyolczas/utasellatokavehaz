@@ -15,6 +15,8 @@
     </div>
     <h1 class="welcome-main">Utasellátó Kávéház és Bisztró</h1>
 </div>
+{{-- Aktuális --}}
+@include('pages.actual')
 {{-- Rólunk START --}}
 @include('pages.about')
 {{-- Rólunk END --}}

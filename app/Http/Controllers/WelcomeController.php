@@ -18,6 +18,7 @@ use App\Foodunique;
 use App\Foodextra;
 use App\Salad;
 use App\Opening;
+use App\Actual;
 
 class WelcomeController extends Controller
 {
@@ -75,6 +76,8 @@ class WelcomeController extends Controller
             return $a->rank <=> $b->rank;
         });
 
+        $actual = Actual::all();
+
         $opening = Opening::all();
 
         return view(
@@ -92,6 +95,7 @@ class WelcomeController extends Controller
                 'foodunique' => $foodunique,
                 'foodextra' => $foodextra,
                 'salad' => $salad,
+                'actual' => $actual,
                 'opening' => $opening,
                 ]);
     }
