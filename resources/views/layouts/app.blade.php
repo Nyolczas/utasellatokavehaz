@@ -66,6 +66,9 @@ $pages=[
                             </a>
 
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="{{ url('/actual') }}">Aktuális</a>
+                                <a class="dropdown-item" href="{{ url('/opening') }}">Nyitvatartás</a>
+                                <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="{{ url('/adhotdrinks') }}">Meleg italok</a>
                                 <a class="dropdown-item" href="{{ url('/adkave') }}">Kávé különlegességek</a>
                                 <a class="dropdown-item" href="{{ url('/adsoftdrink') }}">Üdítők</a>
@@ -74,8 +77,7 @@ $pages=[
                                 <a class="dropdown-item" href="{{ url('/adalcohol') }}">Szeszes italok</a>
                                 <a class="dropdown-item" href="{{ url('/adfood') }}">Ételek</a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="{{ url('/opening') }}">Nyitvatartás</a>
-                                <div class="dropdown-divider"></div>
+
                                 <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                     {{ __('Kijelentkezés') }}
