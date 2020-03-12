@@ -11026,6 +11026,8 @@ hr {
   bottom: 0;
   right: 0;
   width: 100%;
+  transform: translate3d(0, 0, 0);
+  z-index: 100;
 }
 
 .white-header {

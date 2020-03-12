@@ -3,7 +3,7 @@
 @section('content')
 
 @if(session()->has('status'))
-<div class="alert alert-dismissible alert-success mb-0">
+<div class="alert alert-dismissible alert-success mb-0 bottom-alert">
     <button type="button" class="close" data-dismiss="alert">&times;</button>
     <strong>{{  session() ->get('status') }}</strong>
 </div>

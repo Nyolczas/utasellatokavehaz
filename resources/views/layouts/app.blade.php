@@ -3,7 +3,7 @@ $pages=[
 ['name'=>'','bjuti'=>'Főoldal'],
 ['name'=>'about','bjuti'=>'Rólunk'],
 ['name'=>'menu','bjuti'=>'Menü'],
-['name'=>'gallery','bjuti'=>'Galéria'],
+// ['name'=>'gallery','bjuti'=>'Galéria'],
 ['name'=>'event','bjuti'=>'Rendezvény'],
 ['name'=>'contact','bjuti'=>'Kapcsolat']
 ];
