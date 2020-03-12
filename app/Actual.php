@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Actual extends Model
 {
     protected $table = 'actual';
-    protected $fillable = ['is_active', 'title', 'text'];
+    protected $fillable = ['title', 'text'];
 
     public function saveActual($request, $actual)
     {
@@ -15,7 +15,7 @@ class Actual extends Model
       if($request->input('is_active') == "true"){
           $inputActive = 1;
       }
-      $actual->is_active = $request->$inputActive;
+      $actual->is_active = $inputActive;
       $actual->title = $request->input('title');
       $actual->text = $request->input('text');
       $actual->save();

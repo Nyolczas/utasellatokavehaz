@@ -29,6 +29,10 @@ body {
   color: #E8DDCC;
 }
 
+.text-off-hidden {
+  color: #c8ae86;
+}
+
 /*!
  * Bootstrap v4.4.1 (https://getbootstrap.com/)
  * Copyright 2011-2019 The Bootstrap Authors
@@ -11017,6 +11021,13 @@ hr {
   border-top: 1px solid rgba(229, 194, 130, 0.5);
 }
 
+.bottom-alert {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+}
+
 .white-header {
   background-color: white;
   color: #E5C282;
@@ -11110,6 +11121,24 @@ hr {
 
 .actual {
   background-color: #6E0D0D;
+}
+
+.actual-hidden {
+  opacity: 0.68;
+}
+
+.actual-text {
+  width: 100%;
+  font-size: 18px;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+}
+
+.actual-title {
+  width: 100%;
+  font-size: 40px;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
 }
 
 .blackboard {

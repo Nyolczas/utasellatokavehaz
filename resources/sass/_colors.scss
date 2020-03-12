@@ -12,6 +12,7 @@ $teal: #4dc0b5;
 $cyan: #6cb2eb;
 
 $off-white: #E8DDCC;
+$off-hidden: darken($off-white, 20%);
 $gold : #E5C282;
 $barna : #634115;
 
@@ -21,4 +22,7 @@ $barna : #634115;
 
 .text-off-white{
     color: $off-white;
+}
+.text-off-hidden{
+    color: $off-hidden;
 }
