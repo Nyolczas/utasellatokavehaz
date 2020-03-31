@@ -18,9 +18,11 @@ A több, mint százéves mozdony-csodák között sétálva az ember úgy érezh
             <div class="blackboard p-5 text-center">
                 <h2 class="heading text-gold">Nyitvatartás</h2>
                 <h4 class="text-gold mb-5"><b>Április 1 - Október 31.</b></h4>
-                @for ($i = 1; $i < 7; $i++)
-                <h5 class="text-off-white mb-3">{{ $opening[$i]->time }}</h5>
-                @endfor
+                @if(isset($opening[1]))
+                    @for ($i = 1; $i < 7; $i++)
+                    <h5 class="text-off-white mb-3">{{ $opening[$i]->time }}</h5>
+                    @endfor
+                @endif    
             </div>
         </div>
     </div>
